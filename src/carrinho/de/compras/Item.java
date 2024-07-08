@@ -31,10 +31,10 @@ public class Item {
   @Override
   public String toString() {
     return "Item{" +
-        "nome='" + nome + '\'' +
-        ", preco=" + preco +
-        ", quantidade=" + quantidade +
-        '}';
+        "\n    nome='" + nome + '\'' +
+        ",\n    preco=" + preco +
+        ",\n    quantidade=" + quantidade +
+        "\n}";
   }
 
 }

@@ -1,5 +1,7 @@
 package set.operacoesBasicas.Pesquisa.ListaDeTarefas;
 
+import java.util.Objects;
+
 public class Tarefa {
   private String descricao;
   private boolean check;
@@ -19,6 +21,22 @@ public class Tarefa {
 
   public void setCheck(boolean check) {
     this.check = check;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (!(o instanceof Tarefa tarefa)) {
+      return false;
+    }
+    return Objects.equals(descricao, tarefa.descricao);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(descricao);
   }
 
   @Override
